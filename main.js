@@ -9,16 +9,16 @@ function setState( health )
         nodePlayerState('dead-player-expression');
         return;
     }
-
-    if(health >= 75)
+    
+    if(health <= 20)
     {
-        currentState = "healthy";
+        currentState = "critical";
         nodeHealthState(currentState);
-        nodePlayerState('player-healthy');
+        nodePlayerState('player-critical');
         return;
     }
-    
-    if(health >= 50)
+
+    if(health <= 50)
     {
         currentState = "damaged";
         nodeHealthState(currentState);
@@ -26,13 +26,14 @@ function setState( health )
         return;
     }
 
-    if(health >= 25)
+    if(health <= 100)
     {
-        currentState = "critical";
+        currentState = "healthy";
         nodeHealthState(currentState);
-        nodePlayerState('player-critical');
+        nodePlayerState('player-healthy');
         return;
     }
+    
 }
 
 function nodeHealthState(applyState)
