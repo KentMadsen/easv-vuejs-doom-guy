@@ -25,9 +25,6 @@ footer
 
 }
 
-// healthy: #2ecc71
-// damaged: #f1c40f
-// critical: #e74c3c
 
 #vuejs
 {
@@ -52,6 +49,7 @@ footer
 
     background-color: #34495e;
     color:white;
+
     text-transform: uppercase;
     font-weight: bold;
 
@@ -62,7 +60,6 @@ footer
 
 #player
 {
-    background-image: url('./img/player.png');
     margin-left: auto;
     margin-right: auto;
 
@@ -74,7 +71,7 @@ footer
 
 #player-health
 {
-    border:1px solid lightgray;
+    border:1px solid gray;
     width: 200px;
     height: 25px;
     margin:16px auto;
@@ -88,49 +85,6 @@ footer
     width: 100%;
     
 
-}
-
-.default-player-expression
-{
-    background-position-x: -208px;
-    background-position-y: 0px;
-}
-
-// 52
-.angry-player-expression
-{
-    background-position-x: -52px;
-    background-position-y: 0px;
-}
-
-.shocked-player-expression
-{
-    background-position-x: -104px;
-    background-position-y: 0px;
-}
-
-.supession-left-player-expression
-{
-    background-position-x: -156px;
-    background-position-y: 0px;
-}
-
-.supession-right-player-expression
-{
-    background-position-x: -260px;
-    background-position-y: 0px;
-}
-
-.dead-player-expression
-{
-    background-position-x: 0px;
-    background-position-y: -332px;
-}
-
-.sadistic-player-expression
-{
-    background-position-x: 0px;
-    background-position-y: 0px;
 }
 
 .section-debug

@@ -1,0 +1,26 @@
+#player {
+  background-image: url("./img/player.png");
+}
+
+.default-player-expression {
+  background-position-x: -208px;
+}
+
+.player-healthy {
+  background-position-y: 0px;
+}
+
+.player-damaged {
+  background-position-y: -130px;
+}
+
+.player-critical {
+  background-position-y: -200px;
+}
+
+.dead-player-expression {
+  background-position-x: 0px !important;
+  background-position-y: -332px !important;
+}
+
+/*# sourceMappingURL=image.css.map */

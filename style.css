@@ -31,7 +31,6 @@ body {
 }
 
 #player {
-  background-image: url("./img/player.png");
   margin-left: auto;
   margin-right: auto;
   background-repeat: no-repeat;
@@ -40,7 +39,7 @@ body {
 }
 
 #player-health {
-  border: 1px solid lightgray;
+  border: 1px solid gray;
   width: 200px;
   height: 25px;
   margin: 16px auto;
@@ -50,41 +49,6 @@ body {
   transition-duration: 340ms;
   height: 100%;
   width: 100%;
-}
-
-.default-player-expression {
-  background-position-x: -208px;
-  background-position-y: 0px;
-}
-
-.angry-player-expression {
-  background-position-x: -52px;
-  background-position-y: 0px;
-}
-
-.shocked-player-expression {
-  background-position-x: -104px;
-  background-position-y: 0px;
-}
-
-.supession-left-player-expression {
-  background-position-x: -156px;
-  background-position-y: 0px;
-}
-
-.supession-right-player-expression {
-  background-position-x: -260px;
-  background-position-y: 0px;
-}
-
-.dead-player-expression {
-  background-position-x: 0px;
-  background-position-y: -332px;
-}
-
-.sadistic-player-expression {
-  background-position-x: 0px;
-  background-position-y: 0px;
 }
 
 .section-debug {

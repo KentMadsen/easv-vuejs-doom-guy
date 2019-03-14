@@ -2,10 +2,19 @@ function setState( health )
 {
     var currentState = null;
 
+    if(health == 0)
+    {
+        currentState = "critical";
+        nodeHealthState(currentState);
+        nodePlayerState('dead-player-expression');
+        return;
+    }
+
     if(health >= 75)
     {
         currentState = "healthy";
         nodeHealthState(currentState);
+        nodePlayerState('player-healthy');
         return;
     }
     
@@ -13,6 +22,7 @@ function setState( health )
     {
         currentState = "damaged";
         nodeHealthState(currentState);
+        nodePlayerState('player-damaged');
         return;
     }
 
@@ -20,6 +30,7 @@ function setState( health )
     {
         currentState = "critical";
         nodeHealthState(currentState);
+        nodePlayerState('player-critical');
         return;
     }
 }
@@ -36,6 +47,21 @@ function nodeHealthState(applyState)
     {
         node.className = "";
         node.className += " " + applyState;  
+    }
+}
+
+function nodePlayerState(applyState)
+{
+    var node = document.getElementById('player');
+
+    if(node.classList.contains(applyState))
+    {
+        return;
+    }
+    else
+    {
+        node.className = "default-player-expression";
+        node.className += " " + applyState;
     }
 
 }
@@ -60,6 +86,7 @@ var app = new Vue({
             if(this.health <=0)
             {
                 this.ended=true;
+                this.health=0;
             }
 
             setState(this.health);
