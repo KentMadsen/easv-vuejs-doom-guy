@@ -9,7 +9,7 @@ function setState( health )
         nodePlayerState('dead-player-expression');
         return;
     }
-    
+
     if(health <= 20)
     {
         currentState = "critical";
@@ -18,7 +18,7 @@ function setState( health )
         return;
     }
 
-    if(health <= 50)
+    if(health <= 65)
     {
         currentState = "damaged";
         nodeHealthState(currentState);
