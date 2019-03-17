@@ -43,7 +43,8 @@
                 </div>
 
                 <div id="controls">
-                    <button v-on:click="damage">
+                    <button v-on:click="damage"
+                            v-show="alive">
                         Damage
                     </button>
                     <button v-on:click="restart"

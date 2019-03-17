@@ -33,7 +33,7 @@ function setState( health )
         nodePlayerState('player-healthy');
         return;
     }
-    
+
 }
 
 function nodeHealthState(applyState)
@@ -47,7 +47,7 @@ function nodeHealthState(applyState)
     else
     {
         node.className = "";
-        node.className += " " + applyState;  
+        node.className += " " + applyState;
     }
 }
 
@@ -72,7 +72,8 @@ var app = new Vue({
     data:
     {
         health:100,
-        ended:false
+        ended:false,
+        alive:true
     },
     watch:
     {
@@ -87,6 +88,7 @@ var app = new Vue({
             if(this.health <=0)
             {
                 this.ended=true;
+                this.alive=false;
                 this.health=0;
             }
 
@@ -99,9 +101,9 @@ var app = new Vue({
             setState(100);
 
             this.ended = false;
+            this.alive = true;
         }
-        
-        
+
+
     }
 })
-
