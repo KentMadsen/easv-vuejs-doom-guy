@@ -2,24 +2,24 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        
-        <meta name="viewport" 
+
+        <meta name="viewport"
               content="width=device-width, initial-scale=1.0">
 
-        <meta http-equiv="X-UA-Compatible" 
+        <meta http-equiv="X-UA-Compatible"
               content="ie=edge">
 
-        <link rel="stylesheet" 
-              href="style.css">
-              
-        <link rel="stylesheet" 
-              href="image.css">
+        <link rel="stylesheet"
+              href="./css/style.css">
+
+        <link rel="stylesheet"
+              href="./css/image.css">
 
         <title>
             Doom Guy
         </title>
     </head>
-    
+
     <body>
        <header>
 
@@ -27,15 +27,16 @@
        <main>
             <div id="vuejs">
                 <!-- Player Image-->
-                <div id="player" class="default-player-expression player-healthy">
-                </div>  
+                <div id="player"
+                     class="default-player-expression player-healthy">
+                </div>
 
                 <div id="player-damage">
 
                 </div>
 
                 <div id="player-health">
-                    <div id="healthbar-color" 
+                    <div id="healthbar-color"
                          class="healthy"
                          v-bind:style="{ width: health + '%' }">
                     </div>
@@ -45,21 +46,21 @@
                     <button v-on:click="damage">
                         Damage
                     </button>
-                    <button v-on:click="restart" 
+                    <button v-on:click="restart"
                             v-show="ended">
                         Restart
                     </button>
-                </div>         
+                </div>
             </div>
        </main>
        <footer>
 
        </footer>
     </body>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
     </script>
 
-    <script src="./main.js">
+    <script src="./js/main.js">
     </script>
 </html>
